@@ -1,0 +1,9 @@
+.ItemListContainer {
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+        h1{
+        text-align: center;
+        color: black;
+    }
+}
