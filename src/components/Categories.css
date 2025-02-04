@@ -1,0 +1,12 @@
+h1{
+    color: black;
+}
+ul{
+    color:  black;
+    padding: 5px;
+    margin: 5px;
+    a{
+        text-decoration:  none;
+        color:  black;
+    }
+}
