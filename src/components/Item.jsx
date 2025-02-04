@@ -18,11 +18,10 @@ const Item = ({item}) => {
 
     return (
         <div className="Item">
-            <div>
+            <div className="ImageContainer">
                 <img src={imagePath} alt={item.alt} />
             </div>
             <h2>{item.name}</h2>
-            <p> {item.description}</p>
             <p> Price: $ {item.price}.00</p>
             <button> See detail </button>
         </div>

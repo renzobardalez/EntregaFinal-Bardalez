@@ -1,21 +1,43 @@
 .Item {
     border: 1px solid black;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr, 2fr, repeat(2,1fr);
+    grid-template-areas: 
+    "image"
+    "item"
+    "price"
+    "button";
+    height: 350px;
     width: 200px;
     color: black;
-    div{
-        height: 300px;
-        width: auto;
+    .ImageContainer{
+        grid-area: image;
+        height: 200px;
         overflow: hidden;
         img{
         width: 100%;
         height: 100%;
         object-fit: cover;
         }
+    }   
+    h2{
+        display: flex;
+        grid-area: item;
+        text-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    p{  
+        display: flex;
+        grid-area: price;
+        justify-content: center;
+        text-align: center;
+    }
+    button{
+        margin: 5px;
+        padding: 5px;
+        grid-area: button;
     }
 }
