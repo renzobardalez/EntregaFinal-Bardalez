@@ -1,22 +1,21 @@
-.ItemDetail {
+.item-detail {
     border: 1px solid black;
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4fr, 2fr, repeat(3,1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr, repeat(3,1fr);
     grid-template-areas: 
-    "image"
-    "item"
-    "price"
-    "button"
-    "itemCount";
-    height: 350px;
-    width: 200px;
-    color: black;
-    .ImageContainer{
+    "image item"
+    "image price"
+    "image description"
+    "image itemCount";
+    width: auto;
+    height: auto;
+    color: black;;
+    .image-container{
         grid-area: image;
         height: 200px;
-        width: auto;
+        width: 200px;
         overflow: hidden;
         img{
         width: 100%;
@@ -24,25 +23,26 @@
         object-fit: cover;
         }
     }   
-    h2{
+    .item{
         display: flex;
         grid-area: item;
         text-wrap: wrap;
         justify-content: center;
         text-align: center;
     }
-    p{  
+    .price{
         display: flex;
         grid-area: price;
         justify-content: center;
         text-align: center;
     }
-    button{
-        margin: 5px;
-        padding: 5px;
-        grid-area: button;
+    .description{  
+        display: flex;
+        grid-area: description;
+        justify-content: center;
+        text-align: center;
     }
-    .ItemDeItemCounttail{
+    .item-count{
         grid-area:itemCount ;
     }
 }

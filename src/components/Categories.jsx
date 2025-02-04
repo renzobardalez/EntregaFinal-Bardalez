@@ -12,7 +12,7 @@ function Categories () {
     return (
         <>
         <Title text="Categories"/>
-        <div>
+        <div className="item-list-container">
             <ul >
                 {cat.map((item) => (
                     <li key={item.id}>

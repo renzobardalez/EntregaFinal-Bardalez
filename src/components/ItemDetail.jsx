@@ -20,13 +20,16 @@ const ItemDetail = ({ item }) => {
 
     return (
         <>
-        <div className="Item">
-            <div className="ImageContainer">
+        <div className="item-detail">
+            <div className="image-container">
                 <img src={imagePath} alt={item.alt} />
             </div>
-            <h2>{item.name}</h2>
-            <p> Price: $ {item.price}.00</p>
-            <ItemCount className="ItemCount"/>
+            <h2 className="item">{item.name}</h2>
+            <p className="price"> Price: $ {item.price}.00</p>
+            <p className="description"> Description: $ {item.description}</p>
+            <div className="item-count">
+                <ItemCount />
+            </div>
         </div>
         </>
     );
