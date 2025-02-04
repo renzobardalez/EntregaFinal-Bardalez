@@ -1,14 +1,35 @@
+import "./ItemDetail.css";
+import "./ItemCount"
+import { useState, useEffect } from "react";
+import ItemCount from "./ItemCount";
 
+const ItemDetail = ({ item }) => {
+    const [imagePath, setImagePath] = useState('');
 
-const ItemCount = ({ items }) => {
+    useEffect(() => {
+        const loadImage = async ()=>{
+            try{
+                const image = await import(`../assets/images/${item.image}`);
+                setImagePath(image.default);
+            } catch(error){
+                console.error('Error al cargar imágenes:', error);
+            }
+        };
+        loadImage();
+    }, [item.image]);
 
-    function handleCart(cantidad, producto){
-        console.log(`Agregaste ${cantidad} ${producto}(s) al carrito.`)
-    }
-        return (
-            <div>
-                <ItemCount stock={5} onAdd={handleCart} producto={"Tanks"}/> 
+    return (
+        <>
+        <div className="Item">
+            <div className="ImageContainer">
+                <img src={imagePath} alt={item.alt} />
             </div>
-        );
-    };
-    export default ItemCount;
+            <h2>{item.name}</h2>
+            <p> Price: $ {item.price}.00</p>
+            <ItemCount className="ItemCount"/>
+        </div>
+        </>
+    );
+};
+
+export default ItemDetail;

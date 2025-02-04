@@ -15,6 +15,7 @@
     .ImageContainer{
         grid-area: image;
         height: 200px;
+        width: auto;
         overflow: hidden;
         img{
         width: 100%;

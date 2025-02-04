@@ -1,15 +1,48 @@
-.card{
-    padding: 5px;
-    margin: 5px;
-    border: solid 1px black;
-    h1{
-        padding: 5px;
-        margin: 5px;
-        border: solid 1px black;
+.ItemDetail {
+    border: 1px solid black;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr, 2fr, repeat(3,1fr);
+    grid-template-areas: 
+    "image"
+    "item"
+    "price"
+    "button"
+    "itemCount";
+    height: 350px;
+    width: 200px;
+    color: black;
+    .ImageContainer{
+        grid-area: image;
+        height: 200px;
+        width: auto;
+        overflow: hidden;
+        img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+    }   
+    h2{
+        display: flex;
+        grid-area: item;
+        text-wrap: wrap;
+        justify-content: center;
+        text-align: center;
     }
-    p{
-        padding: 5px;
+    p{  
+        display: flex;
+        grid-area: price;
+        justify-content: center;
+        text-align: center;
+    }
+    button{
         margin: 5px;
-        border: solid 1px black;
+        padding: 5px;
+        grid-area: button;
+    }
+    .ItemDeItemCounttail{
+        grid-area:itemCount ;
     }
 }
