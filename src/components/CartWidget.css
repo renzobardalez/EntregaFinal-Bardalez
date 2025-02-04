@@ -1,0 +1,39 @@
+.cartWidget{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+    .cartImage{
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .cartBadge {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(60%, -30%);
+        span{
+            display: flex;
+            font-size: 0.8rem;
+        }
+    }

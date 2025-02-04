@@ -22,7 +22,7 @@ const ItemListContainer = () => {
     },[]);
 return (
     <div className="ItemListContainer">
-        <h1>JOIN THE CLUB</h1>
+        <h2>JOIN THE CLUB</h2>
         {loading ? (
             <p> Cargando... </p>) : (<ItemList items={items} />)
         }
