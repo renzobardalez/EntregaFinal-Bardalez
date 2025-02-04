@@ -21,8 +21,10 @@ const Item = ({item}) => {
             <div>
                 <img src={imagePath} alt={item.alt} />
             </div>
-            <h2>item: {item.name}</h2>
-            <p> description: {item.description}</p>
+            <h2>{item.name}</h2>
+            <p> {item.description}</p>
+            <p> Price: $ {item.price}.00</p>
+            <button> See detail </button>
         </div>
     );
 };
