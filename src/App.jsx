@@ -9,7 +9,7 @@ import Categories from "./components/Categories";
 import Category from "./components/Category";
 import NotFound from "./components/NotFound";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-
+import Filter from "./components/Filter";
 const App = ()=> {
 
   return (
@@ -24,6 +24,7 @@ const App = ()=> {
             <Route path="*" element={<NotFound/>}/>
           </Routes>
       </BrowserRouter>
+    <Filter/>
     </>
   );
 };
