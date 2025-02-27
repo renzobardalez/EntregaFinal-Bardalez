@@ -3,7 +3,11 @@ import { useState, useEffect } from 'react';
 import ItemList from './ItemList';
 import { getProducts } from "../api/productsAPI";
 
+//import { useParams } from "react-router-dom";
+
 const ItemListContainer = () => {
+    // Agregar useParams desde el navBar para la categoria
+    //const {category} = useParams;
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
 

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { getProductById } from "../api/productsAPI";
 import "./ItemDetailContainer.css"
 import ItemDetail from "./ItemDetail";
+import { getDoc, getFirestore, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
 const { id } = useParams();
@@ -22,6 +23,20 @@ useEffect(() => {
     };
     fetchItem();
 }, [id]);
+
+
+useEffect(()=>{
+    const db = getFirestore()
+    const itemRef = doc(db, 'items', id)
+    getDoc(itemRef).then(snapshot =>{
+        if(snapshot.exists()){
+            setItem({id: snapshot.id, ...snapshot.data()})
+        } else{
+            console.log('No existe el producto')
+        }
+    }).finally(()=>setLoading(false))
+},[])
+
 
     if (loading) {
     return <p>Cargando...</p>;

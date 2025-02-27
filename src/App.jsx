@@ -10,6 +10,9 @@ import Category from "./components/Category";
 import NotFound from "./components/NotFound";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Filter from "./components/Filter";
+import FilterUseMemo from "./components/FilterUseMemo";
+import Firebase from "./components/Firebase";
+
 const App = ()=> {
 
   return (
@@ -25,6 +28,8 @@ const App = ()=> {
           </Routes>
       </BrowserRouter>
     <Filter/>
+    <FilterUseMemo/>
+    <Firebase/> {/* Para enviar datos a Firebase */}
     </>
   );
 };

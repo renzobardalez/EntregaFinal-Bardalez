@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
-function Filter(){
+function FilterUseMemo(){
     const [query, setQuery] =  useState("");
     const items = [
         "Renzo",
@@ -10,13 +10,15 @@ function Filter(){
         "Bosh",
         "Lolo"
     ];
-const filteredItems =() => {
-    console.log("Filtrando elementos...");
 
-    return items.filter((item) =>
-        item.toLowerCase().includes(query.toLowerCase())
-    );
-};
+const filteredItems = useMemo(() => {
+        console.log("Filtrando elementos...");
+    
+        return items.filter((item) =>
+            item.toLowerCase().includes(query.toLowerCase())
+        );
+    },[query])
+
     return (
         <div>
             <input
@@ -24,12 +26,12 @@ const filteredItems =() => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
-            <ul>
-                {filteredItems().map((item, index) => (
+            <ul> 
+                {filteredItems.map((item, index) => ( /* filteredItems ya no se llama coo función ya que es un hook */
                     <li key={index}>{item}</li>
                 ))}
             </ul>
         </div>
     );
 }
-export default Filter;
+export default FilterUseMemo;  
