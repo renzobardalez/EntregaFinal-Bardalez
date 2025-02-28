@@ -1,10 +1,9 @@
 import "./ItemListContainer.css";
-import ItemList from './ItemList';
+import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
 
-//import { useParams } from "react-router-dom";
-
-const ItemListContainer = ({category}) => {
-
+const ItemListContainer = () => {
+    const { category } = useParams();
 return (
     <div className="ItemListContainer">
         <h2>JOIN THE CLUB</h2>

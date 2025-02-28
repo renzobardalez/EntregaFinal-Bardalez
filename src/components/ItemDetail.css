@@ -11,7 +11,9 @@
     "image itemCount";
     width: auto;
     height: auto;
-    color: black;;
+    color: black;
+    justify-items: center;
+    align-items: center;
     .image-container{
         grid-area: image;
         height: 200px;
