@@ -46,6 +46,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer";
 import Cart from "./components/Cart";
 import { CartProvider } from "./context/CartContext";
+
 const App = ()=> {
 
   return (
