@@ -4,10 +4,10 @@ import ItemListContainer from "./ItemListContainer";
 
 const Home = () => {
     return (
-        <>
-        <Title text="Home"/>
-        <ItemListContainer/>
-        </>
+        <div>
+            <Title text="Home"/>
+            <ItemListContainer/>
+        </div>
     );
 };
 export default Home;
