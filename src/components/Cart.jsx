@@ -6,9 +6,9 @@ function Cart () {
     const {cartItems, clearCart, finalizePurchase } =useContext(CartContext);
     return (
         <div className="cart-container">
-            <h2> Carrito de compras </h2>
+            <h2> Shopping cart </h2>
             {cartItems.length === 0 ? (
-                <p> El carrito esá vacío </p>
+                <p> The cart is empty </p>
             ) : (
                 cartItems.map((item) => (
                     <div key={item.id}>
@@ -20,8 +20,8 @@ function Cart () {
                     </div>
                 ))
             )}
-            <button className="finalize-purchase" onClick={finalizePurchase}> Finalizar compra </button>
-            <button className="clear-cart" onClick={clearCart}> Limpiar carrito </button>
+            <button className="finalize-purchase" onClick={finalizePurchase}> Purchase </button>
+            <button className="clear-cart" onClick={clearCart}> Clear cart </button>
         </div>
     );
 }

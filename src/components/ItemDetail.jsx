@@ -20,7 +20,7 @@ const ItemDetail = ({item}) => {
             </div>
             <h2 className="item">{item.name}</h2>
             <p className="price"> Price: $ {item.price}.00</p>
-            <p className="description"> Description: $ {item.description}</p>
+            <p className="description"> Description: {item.description}</p>
             <div className="item-count">
                 <ItemCount stock={item.stock} onAdd={handleAddToCart} />
             </div>

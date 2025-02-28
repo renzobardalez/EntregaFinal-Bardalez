@@ -2,13 +2,13 @@
     border: 1px solid black;
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 2fr, repeat(3,1fr);
     grid-template-areas: 
-    "image item"
-    "image price"
-    "image description"
-    "image itemCount";
+    "x image item y"
+    "x image price y"
+    "x image description y"
+    "x image itemCount y";
     width: auto;
     height: auto;
     color: black;
@@ -16,8 +16,8 @@
     align-items: center;
     .image-container{
         grid-area: image;
-        height: 200px;
-        width: 200px;
+        height: 300px;
+        width: 300px;
         overflow: hidden;
         img{
         width: 100%;

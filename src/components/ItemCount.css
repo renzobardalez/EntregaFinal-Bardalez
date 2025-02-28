@@ -1,12 +1,55 @@
-.ItemCountContainer{
-    margin: 5px;
+.ItemCountContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 15px;
+}
+
+.ItemCountContainer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none;
     width: 100%;
-    height: auto;
-    span{
-        color: black;
-    }
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Color al pasar el ratón */
+}
+
+button:disabled {
+    background-color: #c0c0c0; /* Color al estar deshabilitado */
+    cursor: not-allowed;
+}
+
+span {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.AddToCartButton {
+    background-color: #28a745; /* Verde para agregar al carrito */
+}
+
+.AddToCartButton:hover {
+    background-color: #218838;
+}
+
+.AddToCartButton:active {
+    background-color: #1e7e34;
 }
