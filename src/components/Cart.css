@@ -5,52 +5,97 @@
     flex-direction: column;
     border: solid 1px black;
     gap: 5px;
+}
+.cart-item-container{
+    display: flex;
+    flex-direction: row;
+}
+.purchase-list{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.remove-item {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 10px;
+    width: 100px;
+}
 
-    .purchase-list{
-        margin: 5px;
-        padding: 5px;
-        display: flex;
-        flex-direction: column;
-    }
-    .finalize-purchase{
-        background-color: #4CAF50; /* Color primario */
-        color: white; /* Texto */
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border: none;
-        border-radius: 4px;
-    }
-    .finalize-purchase:hover {
-        background-color: #45A049; /* Hover */
-    }
-    
-    .finalize-purchase:active {
-        background-color: #3E8E41; /* Activo */
-    }
-    .clear-cart{
-        background-color: #F44336; /* Color primario */
-        color: white; /* Texto */
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border: none;
-        border-radius: 4px;
-    }
-    
-    .clear-cart:hover {
-        background-color: #D32F2F; /* Hover */
-    }
-    
-    .clear-cart:active {
-        background-color: #C62828; /* Activo */
-    }
+.remove-item:hover {
+    background-color: #c82333;
+}
+.finalize-purchase{
+    background-color: #4CAF50; /* Color primario */
+    color: white; /* Texto */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    width: 300px;
+}
+.finalize-purchase:hover {
+    background-color: #45A049; /* Hover */
+}
+
+.finalize-purchase:active {
+    background-color: #3E8E41; /* Activo */
+}
+.clear-cart{
+    background-color: #F44336; /* Color primario */
+    color: white; /* Texto */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.clear-cart:hover {
+    background-color: #D32F2F; /* Hover */
+}
+
+.clear-cart:active {
+    background-color: #C62828; /* Activo */
+}
+
+.buyer-info-form {
+    margin-top: 20px;
+    padding: 5px;
+    margin: 5px;
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.buyer-info-form h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: black;
+}
+
+.buyer-info-form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: whitesmoke;
 }
